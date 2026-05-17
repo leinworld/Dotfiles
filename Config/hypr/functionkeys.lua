@@ -8,3 +8,6 @@ hl.bind("XF86KbdBrightnessDown", hl.dsp.exec_cmd("brightnessctl --device='smc::k
 hl.bind("XF86PowerOff", hl.dsp.exec_cmd("wlogout"))
 hl.bind("XF86LaunchB", hl.dsp.exec_cmd("nwg-drawer"))
 
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true, description = "Play/Pause Media" })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true, description = "Previous Track" })
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true, description = "Next Track" })
