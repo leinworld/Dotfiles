@@ -1,0 +1,7 @@
+require("environments")
+require("general")
+require("keybindings")
+require("functionkeys")
+require("inputs")
+require("windowrules")
+require("autostart")
