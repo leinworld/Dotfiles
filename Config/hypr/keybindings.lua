@@ -1,6 +1,7 @@
 local mainMod = "SUPER"
 local terminal = "kitty"
 local fileManager = "thunar"
+local browser = "microsoft-edge-stable"
 local menu = "hyprlauncher"
 local C = "CTRL"
 
@@ -12,6 +13,7 @@ hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
 
 -- Window keys
