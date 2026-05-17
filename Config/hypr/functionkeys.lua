@@ -6,4 +6,5 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 1%-"), { rep
 hl.bind("XF86KbdBrightnessUp", hl.dsp.exec_cmd("brightnessctl --device='smc::kbd_backlight' set +10%"), { repeating = true })
 hl.bind("XF86KbdBrightnessDown", hl.dsp.exec_cmd("brightnessctl --device='smc::kbd_backlight' set 10%-"), { repeating = true })
 hl.bind("XF86PowerOff", hl.dsp.exec_cmd("wlogout"))
+hl.bind("XF86LaunchB", hl.dsp.exec_cmd("nwg-drawer"))
 

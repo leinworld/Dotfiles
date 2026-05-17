@@ -4,6 +4,14 @@ hl.gesture({
    action = "workspace"
 })
 
+hl.gesture({
+    fingers = 3,
+    direction = "up",
+    action = function()
+        hl.exec_cmd("nwg-drawer")
+    end
+})
+
 hl.config({
 	input = {
 		touchpad = {
