@@ -17,8 +17,11 @@ hl.config({
 		touchpad = {
 			natural_scroll = true
 		},
-		kb_options = "ctrl:swapcaps",
 		follow_mouse = 2
 	}
 })
 
+hl.device({
+	name = "apple-inc.-apple-internal-keyboard-/-trackpad",
+	kb_options = "ctrl:swapcaps",
+})

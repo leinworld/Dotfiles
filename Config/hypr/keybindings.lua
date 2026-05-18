@@ -18,11 +18,11 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
 -- Window keys
 hl.bind(mainMod .. " + " .. C .. " + H", function()
-	hl.dispatch(hl.dsp.window.move({ workspace = "m-1" }))
+	hl.dispatch(hl.dsp.window.move({ workspace = "r-1" }))
 end)
 
 hl.bind(mainMod .. " + " .. C .. " + L", function()
-	hl.dispatch(hl.dsp.window.move({ workspace = "m+1" }))
+	hl.dispatch(hl.dsp.window.move({ workspace = "r+1" }))
 end)
 
 hl.bind(mainMod .. " + H", function()
