@@ -4,6 +4,8 @@ local fileManager = "thunar"
 local browser = "microsoft-edge-stable"
 local menu = "hyprlauncher"
 local C = "CTRL"
+local TAB = "TAB"
+local A = "ALT"
 
 for i = 1, 4 do
 	hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i}))
@@ -15,29 +17,21 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
-
 -- Window keys
-hl.bind(mainMod .. " + " .. C .. " + H", function()
-	hl.dispatch(hl.dsp.window.move({ workspace = "r-1" }))
-end)
+hl.bind(mainMod .. " + " .. C .. " + H",hl.dsp.window.move({ workspace = "r-1" }))
+hl.bind(mainMod .. " + " .. C .. " + L",hl.dsp.window.move({ workspace = "r+1" }))
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "l"}))
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "d" }))
+hl.bind(mainMod .. " + K",hl.dsp.focus({ direction = "u" }))
+hl.bind(mainMod .. " + L",hl.dsp.focus({ direction = "r"}))
 
-hl.bind(mainMod .. " + " .. C .. " + L", function()
-	hl.dispatch(hl.dsp.window.move({ workspace = "r+1" }))
-end)
+hl.bind(mainMod .. " + " .. A .. " + H", hl.dsp.window.swap({ direction = "l"}))
+hl.bind(mainMod .. " + " .. A .. " + J", hl.dsp.window.swap({ direction = "d" }))
+hl.bind(mainMod .. " + " .. A .. " + K",hl.dsp.window.swap({ direction = "u" }))
+hl.bind(mainMod .. " + " .. A .. " + L",hl.dsp.window.swap({ direction = "r"}))
 
-hl.bind(mainMod .. " + H", function()
-	hl.dispatch(hl.dsp.focus({ direction = "l"}))
-end)
+hl.bind(mainMod .. " + " .. TAB, hl.dsp.window.cycle_next({ next = true }))
+hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen_state({ action = "toggle", internal = 1, client = 0 }))
 
-hl.bind(mainMod .. " + J", function()
-	hl.dispatch(hl.dsp.focus({ direction = "d" }))
-end)
-
-hl.bind(mainMod .. " + K", function()
-	hl.dispatch(hl.dsp.focus({ direction = "u" }))
-end)
-
-hl.bind(mainMod .. " + L", function()
-	hl.dispatch(hl.dsp.focus({ direction = "r"}))
-end)
 
