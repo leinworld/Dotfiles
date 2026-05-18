@@ -34,4 +34,4 @@ hl.bind(mainMod .. " + " .. TAB, hl.dsp.window.cycle_next({ next = true }))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen_state({ action = "toggle", internal = 1, client = 0 }))
 
-
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
