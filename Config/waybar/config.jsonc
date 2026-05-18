@@ -6,6 +6,36 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces" // 이 부분을 추가합니다.
+        //"hyprland/window"
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "sort-by-number": true
+    },
+    "hyprland/window": {
+        "format": " {}",
+        "max-length": 50,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) - zsh": "  $1",
+            "^$": "✨ Desktop"
+        }
+    },
     "modules-right": [
         "pulseaudio",
         "network",
