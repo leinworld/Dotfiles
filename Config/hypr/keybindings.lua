@@ -3,6 +3,7 @@ local terminal = "kitty"
 local fileManager = "thunar"
 local browser = "microsoft-edge-stable"
 local menu = "hyprlauncher"
+local emoji = "hypremoji"
 local C = "CTRL"
 local TAB = "TAB"
 local A = "ALT"
@@ -16,6 +17,7 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd(emoji))
 
 -- Window keys
 hl.bind(mainMod .. " + " .. C .. " + H",hl.dsp.window.move({ workspace = "r-1" }))

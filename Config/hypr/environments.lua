@@ -1,5 +1,5 @@
 hl.env("LANG", "ko_KR.UTF-8")
-hl.env("GTK_IM_MODULE", "wayland")
+hl.env("GTK_IM_MODULE", "fcitx")
 hl.env("QT_IM_MODULE", "fcitx")
 hl.env("XMODIFIERS", "@im=fcitx")
 hl.env("SDL_IM_MODULE", "fcitx")

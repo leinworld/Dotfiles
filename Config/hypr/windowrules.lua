@@ -1,4 +1,11 @@
 hl.window_rule({
+	match = { title = "^(HyprEmoji)$" },
+	float = true,
+	center = true,
+	pin = true
+})
+
+hl.window_rule({
 	match = { class = "^(mpv)$" },
 	float = true,
 	center = true
