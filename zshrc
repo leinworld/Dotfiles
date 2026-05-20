@@ -44,7 +44,7 @@ parse_git_branch() {
 }
 update_prompt() {
     PS1="%n@%m
-%K{green}%1~ $(parse_git_branch)%k%K{blue}%F{green}${ARROW}%f%F{white} %#%f%k%F{blue}${ARROW}%f "
+%K{magenta} %1~ $(parse_git_branch)%k%K{cyan}%F{magenta}${ARROW}%f%F{white} %#%f%k%F{cyan}${ARROW}%f "
 }
 precmd_functions+=(update_prompt)
 update_prompt
