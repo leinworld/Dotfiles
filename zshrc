@@ -8,11 +8,13 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/lein/.zshrc'
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
+autoload -U colors && colors
 # End of lines added by compinstall
 alias ls='ls --color'
 alias vi='vim'
+
+ARROW=$'\ue0b0'
 
 ###
 # ADD GIT INFO TO PROMPT
@@ -41,8 +43,8 @@ parse_git_branch() {
   echo "$branch"
 }
 update_prompt() {
-    PS1="%n %1~$(parse_git_branch)
- %# >"
+    PS1="%n@%m
+%K{green}%1~ $(parse_git_branch)%k%K{blue}%F{green}${ARROW}%f%F{white} %#%f%k%F{blue}${ARROW}%f "
 }
 precmd_functions+=(update_prompt)
 update_prompt
