@@ -11,8 +11,7 @@ zstyle :compinstall filename '/home/lein/.zshrc'
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 # End of lines added by compinstall
-alias ls='ls --color'
-alias vi='vim'
+source /etc/profile.d/aliases.sh
 
 ARROW=$'\ue0b0'
 
