@@ -8,7 +8,8 @@ hl.gesture({
     fingers = 3,
     direction = "up",
     action = function()
-        hl.exec_cmd("nwg-drawer")
+        --hl.exec_cmd("nwg-drawer")
+        hl.exec_cmd("rofi -show run")
     end
 })
 

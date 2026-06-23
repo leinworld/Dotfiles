@@ -12,7 +12,7 @@ autoload -Uz compinit && compinit
 autoload -U colors && colors
 # End of lines added by compinstall
 source /etc/profile.d/aliases.sh
-
+export PATH="/home/lein/Dev/SDK/flutter/bin:$PATH"
 ARROW=$'\ue0b0'
 
 ###

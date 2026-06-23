@@ -1,7 +1,7 @@
 hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	--hl.exec_cmd("gnome-keyring-daemon --start --components=secrets")
-	hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("waypaper --restore")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("nwg-drawer -r")
 	hl.exec_cmd("fcitx5 -d")
