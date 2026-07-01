@@ -46,7 +46,11 @@
 #	resume 'wlopm --on \*' \
 #	before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &
 
+#clamshell
 ~/.config/labwc/clamshell.sh &
+# gnome keyring
+dbus-update-activation-environment --all &
+# etc
 sfwbar &
 fcitx5 -d &
 sleep 1; synology-drive &
